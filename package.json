@@ -4,7 +4,9 @@
   "description": "lowdb sample for 1.125",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "server": "nodemon index.js",
+    "build": "npm init -y && npm run build"
   },
   "author": "abel@mit.edu",
   "license": "MIT",
@@ -14,6 +16,7 @@
     "firebase": "^10.13.1",
     "lowdb": "^1.0.0",
     "mongodb": "^3.7.4",
+    "nodemon": "^3.0.3",
     "react-router-dom": "^6.26.1",
     "react-select": "^5.8.0"
   },
