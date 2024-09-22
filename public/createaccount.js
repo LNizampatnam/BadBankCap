@@ -34,12 +34,23 @@ function CreateForm(props){
       return (false);
     }
     return true;
-}
+  }
+
   function handle(){
     if (!validate(name,     'name'))     return(alert("Name is required!"));
     if (!validate(email,    'email'))    return(alert("Email is required!"));
     if (!validate(password, 'password')) return(alert("Password is required!"));
     if (password.length < 8) return(alert("Password must have at least 8 characters!"));
+
+    const auth  = firebase.auth();
+    auth.createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Signed in
+        console.log(userCredential);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
 
     const url = `/account/create/${name}/${email}/${password}/${role}`;
     (async () => {
@@ -78,7 +89,7 @@ function CreateForm(props){
       <option value="user">user</option>
       <option value="admin">admin</option>      
     </select><br/>
-<br/>
+    <br/>
 
     <button type="submit" 
       className="btn btn-light" 

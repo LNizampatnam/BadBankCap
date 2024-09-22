@@ -16,8 +16,9 @@ function Logout(){
 function LogoutForm(props){
 
     function handle(){
-        props.setUser('');
-        props.setShow(false);
+      firebase.auth().signOut();
+      props.setUser('');
+      props.setShow(false);
     }    
 
   return(<>

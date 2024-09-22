@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="styles.css">
     
     <!-- don't use this in production: -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
   </head>
   <body>
     <!-- we will put our teact component inside this div -->
@@ -24,6 +27,7 @@
 
     <!-- load our react component. -->
     <script src="context.js" defer type="text/babel"></script>
+    <script src="firebase.js" defer ></script>
     <script src="navbar.js" defer type="text/babel"></script>
     <script src="usernavbar.js" defer type="text/babel"></script>
     <script src="createaccount.js" defer type="text/babel"></script>

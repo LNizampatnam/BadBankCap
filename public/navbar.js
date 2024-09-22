@@ -7,13 +7,15 @@ function NavBar(){
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
+        
         <ul className="navbar-nav">
-          <li className="nav-item">
+          <li className="nav-item" >
             <Link className="nav-link active" to="/CreateAccount/">Create Account</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/login/">Login</Link>
-          </li>        
+          </li>    
+  
         </ul>
       </div>
     </nav>
